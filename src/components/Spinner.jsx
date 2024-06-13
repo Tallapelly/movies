@@ -2,7 +2,7 @@ import React from "react";
 
 const Spinner = () => {
   return (
-    <div role="status" className="my-[300px]  mx-[580px]">
+    <div role="status" className="my-[300px] h-screen  mx-[580px]">
       <svg
         aria-hidden="true"
         className="w-16 h-16 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
