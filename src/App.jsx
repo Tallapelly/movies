@@ -78,8 +78,8 @@ function App() {
 
   return (
     <>
-      <div className="flex h-auto bg-custom-dark overflow-hidden">
-        <div className=" w-ful sm:w-3/4 h-full">
+      <div className="flex h-screen bg-custom-dark overflow-hidden">
+        <div className=" w-full sm:w-3/4 h-full">
           <Navbar />
           {window.innerWidth < 640 && (
             <div className="mx-20 flex flex-col w-[240px] sm:hidden gap-4">
@@ -110,7 +110,7 @@ function App() {
           ) : (
             <div className="grid grid-cols-1  sm:grid-cols-3 overflow-scroll gap-4  px-4 md:px-0 ">
               {currentData.length === 0 ? (
-                <div className="w-full h-auto my-[324px] mx-[680px]">
+                <div className="w-full h-screen my-[324px] mx-[680px]">
                   <h1 className="text-white text-3xl ">No results found</h1>
                 </div>
               ) : (

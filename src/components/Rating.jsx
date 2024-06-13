@@ -22,6 +22,7 @@ const Rating = () => {
         minYear: state.minYear,
         maxYear: state.maxYear,
         vote_rate: value,
+        page:state.page
       })
     );
   };
