@@ -49,7 +49,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="p-5 text-white text-4xl sicky  my-3 mx-10  flex justify-between">
+    <div className="p-5 text-white  sm:m-0 sm:fixed bg-custom-dark sm:p-[27px] sm:ml-[50px] text-4xl sicky  my-3 mx-10  flex justify-between">
       <a
         href="/"
         className="text-white mx-10 cursor-pointer text-5xl sm:text-4xl sm:text-white"
@@ -57,7 +57,7 @@ const Navbar = () => {
       >
         Discover
       </a>
-      <ul className=" text-xl hidden sm:flex font-black  my-1 gap-10">
+      <ul className=" text-xl hidden sm:flex sm:ml-[120px] font-black  my-1 gap-10">
         <li>
           <Link
             to="/popular"
@@ -86,7 +86,7 @@ const Navbar = () => {
             }
             className="text-2xl"
             style={{
-              color: activeLink === "now_playing" ? "white" : "#3B82F6",
+              color: activeLink === "now_playing" || activeLink === "on_the_air" ? "white" : "#3B82F6",
             }}
           >
             Newest
@@ -103,7 +103,7 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <div className="hidden sm:flex text-blue-400 mx-5">
+      <div className="hidden sm:flex sm:ml-[280px] text-blue-400 mx-5">
         <svg
           className="my-2 text-xl "
           xmlns="http://www.w3.org/2000/svg"

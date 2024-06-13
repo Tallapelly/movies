@@ -24,3 +24,6 @@
   .pagination a.active {
     font-weight: bold;
   }
+  *{
+    overflow: inherit;
+  }

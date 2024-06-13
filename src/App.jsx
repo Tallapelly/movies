@@ -35,7 +35,7 @@ function App() {
       dispatch(filterMoviesFetch({ domain: domain, filter: "popular" }));
     } else if (path == "/trend") {
       dispatch(
-        filterMoviesFetch({ domain: domain, filter: domain == "trending" })
+        filterMoviesFetch({ domain: domain, filter:"trending" })
       );
     } else if (path == "/new") {
       dispatch(
@@ -79,11 +79,11 @@ function App() {
 
   return (
     <>
-      <div className="flex h-auto bg-custom-dark overflow-hidden">
-        <div className=" w-full sm:w-3/4 h-full">
+      <div className="flex h-auto bg-custom-dark ">
+        <div className=" w-full sm:w-3/4  h-full">
           <Navbar />
           {window.innerWidth < 640 && (
-            <div className="mx-20 flex flex-col w-[240px] sm:hidden gap-4">
+            <div className="mx-20 flex flex-col   w-[240px] sm:hidden gap-4">
               <div className="flex text-blue-400 mx-5">
                 <svg
                   className="my-2 text-xl "
@@ -110,7 +110,7 @@ function App() {
           {loading ? (
             <Spinner />
           ) : (
-            <div className="grid grid-cols-1  sm:grid-cols-3 overflow-scroll gap-4  px-4 md:px-0 ">
+            <div className="grid grid-cols-1 overflow-inherit sm:grid-cols-3   sm:my-[82px]  gap-4  px-4 md:px-0 ">
               {currentData.length === 0 ? (
                 <div className="w-full h-screen  my-[324px] mx-[680px]">
                   <h1 className="text-white text-3xl ">No results found</h1>
@@ -132,12 +132,7 @@ function App() {
               )}
             </div>
           )}
-        </div>
-        <div className=" hidden sm:block w-1/4 shadow-2xl">
-          <Sidemenu />
-        </div>
-      </div>
-      <div className="hidden sm:flex  justify-center bg-custom-dark text-white">
+           <div className="hidden sm:flex  justify-center bg-custom-dark text-white">
         <ReactPaginate
           breakLabel="..."
           nextLabel="next >"
@@ -154,6 +149,12 @@ function App() {
           onPageChange={handlePageChange}
         />
       </div>
+        </div>
+        <div className=" hidden sm:block w-1/4 shadow-2xl">
+          <Sidemenu />
+        </div>
+      </div>
+     
     </>
   );
 }

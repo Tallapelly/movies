@@ -46,9 +46,11 @@ function* fetchSearchMovies(action) {
 
 function* filteredMovies(action) {
     const { domain, filter } = action.payload;
+    
     let response = {};
     try {
-        if (action.payload === 'trending') {
+        if (filter == 'trending') {
+            console.log(filter)
             response = yield call(axios.get, `https://api.themoviedb.org/3/trending/${domain}/day?api_key=31202009cb3f3631cb8be1a4aa7a4454`);
         } else {
 
