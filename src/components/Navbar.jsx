@@ -7,7 +7,7 @@ import {
 } from "../store/movieState";
 import { Link } from "react-router-dom";
 import _debounce from "lodash/debounce";
-import { FiMenu } from "react-icons/fi";
+
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("Popular");
   const dispatch = useDispatch();

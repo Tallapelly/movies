@@ -16,6 +16,7 @@ import ReactPaginate from "react-paginate";
 import Dropdown from "./components/Dropdown";
 import Drop2 from "./components/Drop2";
 import Rating from "./components/Rating";
+import Drop3 from "./components/Drop3";
 function App() {
   const movies = useSelector((state) => state.movies.movies);
   const dispatch = useDispatch();
@@ -100,6 +101,7 @@ function App() {
                   placeholder="SEARCH"
                 />
               </div>
+              <Drop3/>
               <Dropdown />
               <Drop2 />
               <Rating />
