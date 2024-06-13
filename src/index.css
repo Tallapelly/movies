@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    color: white;
+    margin: 0;
+  }
+  
+  .pagination li {
+    margin: 0 2px;
+  }
+  
+  .pagination a {
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .pagination a.active {
+    font-weight: bold;
+  }
