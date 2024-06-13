@@ -82,7 +82,7 @@ function App() {
       <div className="flex h-auto bg-custom-dark ">
         <div className=" w-full sm:w-3/4  h-full">
           <Navbar />
-          {window.innerWidth < 640 && (
+          
             <div className="mx-20 flex flex-col   w-[240px] sm:hidden gap-4">
               <div className="flex text-blue-400 mx-5">
                 <svg
@@ -106,7 +106,7 @@ function App() {
               <Drop2 />
               <Rating />
             </div>
-          )}
+    
           {loading ? (
             <Spinner />
           ) : (
@@ -150,7 +150,7 @@ function App() {
         />
       </div>
         </div>
-        <div className=" hidden sm:block w-1/4 shadow-2xl">
+        <div className=" hidden sm:z-10 sm:block w-1/4 sm:shadow-2xl">
           <Sidemenu />
         </div>
       </div>
