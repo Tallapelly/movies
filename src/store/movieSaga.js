@@ -113,3 +113,4 @@ function* watchGetMoviesFetch() {
 export default function* movieSaga() {
     yield watchGetMoviesFetch();
 }
+
