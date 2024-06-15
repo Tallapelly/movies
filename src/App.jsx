@@ -80,7 +80,7 @@ function App() {
   return (
     <>
       <div className="flex h-auto bg-custom-dark ">
-        <div className=" w-full sm:w-3/4  h-full">
+        <div className="  w-3/4 sm:relative  h-full">
           <Navbar />
           
             <div className="mx-20 flex flex-col   w-[240px] sm:hidden gap-4">
@@ -110,7 +110,7 @@ function App() {
           {loading ? (
             <Spinner />
           ) : (
-            <div className="grid grid-cols-1 overflow-inherit sm:grid-cols-3   sm:my-[82px]  gap-4  px-4 md:px-0 ">
+            <div className="grid grid-cols-1 overflow-inherit sm:grid-cols-3   sm:my-[82px] ml-[79px]  gap-4  px-4 md:px-0 ">
               {currentData.length === 0 ? (
                 <div className="w-full h-screen  my-[324px] mx-[680px]">
                   <h1 className="text-white text-3xl ">No results found</h1>
@@ -150,7 +150,7 @@ function App() {
         />
       </div>
         </div>
-        <div className=" hidden sm:z-10 sm:block w-1/4 sm:shadow-2xl">
+        <div className=" hidden  sm:flex z-10 w-1/4 sm:shadow-2xl">
           <Sidemenu />
         </div>
       </div>

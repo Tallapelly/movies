@@ -49,15 +49,15 @@ const Navbar = () => {
   };
 
   return (
-    <div className="p-5 text-white  sm:m-0 sm:fixed bg-custom-dark sm:p-[27px] sm:ml-[50px] text-4xl sicky  my-3 mx-10  flex justify-between">
+    <header className="p-4 text-white sm:m-0 bg-custom-dark sm:w-9/12   ml-[77px] mt-[17px] text-4xl sm:fixed  justify-around  flex ">
       <a
         href="/"
-        className="text-white mx-10 cursor-pointer text-5xl sm:text-4xl sm:text-white"
+        className="text-white  cursor-pointer text-5xl sm:text-4xl sm:text-white"
         onClick={() => window.location.reload()}
       >
         Discover
       </a>
-      <ul className=" text-xl hidden sm:flex sm:ml-[120px] font-black  my-1 gap-10">
+      <ul className=" text-xl sm:bg-pink hidden sm:flex  font-black  my-1 gap-10">
         <li>
           <Link
             to="/popular"
@@ -92,18 +92,18 @@ const Navbar = () => {
             Newest
           </Link>
         </li>
-        <li>
+        <li  style={{width:"max-content"}}>
           <Link
             to="/top"
             onClick={() => handleClick("top_rated")}
-            className="text-2xl"
+            className="text-2xl  "
             style={{ color: activeLink === "top_rated" ? "white" : "#3B82F6" }}
           >
             Top rated
           </Link>
         </li>
       </ul>
-      <div className="hidden sm:flex sm:ml-[280px] text-blue-400 mx-5">
+      <div className="hidden sm:flex   text-blue-400 mx-5">
         <svg
           className="my-2 text-xl "
           xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +123,7 @@ const Navbar = () => {
           placeholder="SEARCH"
         />
       </div>
-    </div>
+    </header>
   );
 };
 

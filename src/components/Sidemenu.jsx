@@ -6,7 +6,7 @@ import Rating from "./Rating.jsx";
 
 const Sidemenu = () => {
   return (
-    <div className=" fixed  p-5  h-screen  w-[408px] my-5 mx-5 ">
+    <div className=" fixed p-5  h-screen  w-[408px] my-5 mx-5 ">
       <p className="text-gray-500 text-2xl my-3 pr-12 font-bold">
         DISCOVER OPTIONS
       </p>
