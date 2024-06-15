@@ -24,7 +24,7 @@ function App() {
   const loading = useSelector((state) => state.movies.isLoading);
   const total_pages = useSelector((state) => state.movies.total_pages);
   const state = useSelector((state) => state.movies);
-  console.log(total_pages);
+
   useEffect(() => {
     dispatch(getMoviesFetch(domain));
   }, [dispatch, domain]);
@@ -57,7 +57,7 @@ function App() {
 
   // Callback function for page change
   const handlePageChange = ({ selected }) => {
-    console.log(selected);
+   
     dispatch(
       genreFilter({
         domain: state.domain,
@@ -75,7 +75,7 @@ function App() {
   const perPage = 20;
 
   const currentData = movies.slice(1, perPage);
-  console.log("new", currentData);
+
 
   return (
     <>
@@ -121,7 +121,7 @@ function App() {
                     key={movie.id}
                     title={domain === "movie" ? movie.title : movie.name}
                     posterPath={movie.poster_path}
-                    genre={getGenreNameById(movie.genre_ids[0])}
+                    genre={getGenreNameById(movie.genre_ids[0]?movie.genre_ids[0]:null)}
                     year={
                       domain === "movie"
                         ? movie.release_date?.slice(0, 4)

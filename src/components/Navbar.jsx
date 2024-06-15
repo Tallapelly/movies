@@ -41,7 +41,7 @@ const Navbar = () => {
 
   const handleSearch = () => {
     if (searchQuery.trim() !== "") {
-      // console.log(domain)
+     
       dispatch(searchMoviesFetch({ domain: domain, query: searchQuery }));
     } else {
       dispatch(getMoviesFetch(domain));

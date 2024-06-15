@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ title, posterPath, genre, year }) => {
   const img_path = "https://image.tmdb.org/t/p/w500";
-  // console.log(title)
+
   return (
     <div className="flex flex-col sm:flex items-center justify-center p-4">
       <img

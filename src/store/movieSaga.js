@@ -94,7 +94,7 @@ function* genreFilterfun(action) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const movies = yield response.data;
-        // console.log(movies.total_pages,movies.results);
+      
         yield put(updateTotalPages(movies.total_pages))
         yield put(genreFilterSuccess(movies.results));
     } catch (error) {

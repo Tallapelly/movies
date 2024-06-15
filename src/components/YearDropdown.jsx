@@ -16,7 +16,7 @@ const YearDropdown = ({ defaultValue, minFlag = false }) => {
 
   const handleChange = (value) => {
     const year = value.value;
-    console.log(year);
+    
     minFlag
       ? dispatch(
           genreFilter({
